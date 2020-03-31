@@ -1,6 +1,134 @@
-nav {
-  width: 100%;
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+}
+
+.nav {
+  display: block;
+  background-color: #2e191e;
+}
+
+.nav-container {
+  min-width: 40rem;
+  max-width: 80%;
+  display: flex;
+  margin: 0 auto;
+  height: 10rem;
+  justify-content: space-between;
+  align-content: center;
+}
+
+h1 {
+  color: #f3f3f3;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.nav-left {
   display: flex;
   align-items: center;
+  justify-items: center;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+
+  a {
+    text-transform: uppercase;
+    display: inline-block;
+    color: #f3f3f3;
+    text-decoration: none;
+    font-size: 1.4rem;
+    margin: 1rem;
+    border-bottom: 2px transparent solid;
+    transition: all 0.5s;
+    &:hover {
+      border-bottom: 2px #ccc solid;
+      color: #ccc;
+    }
+  }
+}
+
+a.router-link-exact-active {
+  border-bottom: 2px #f3f3f3 solid;
+}
+
+.main {
+  height: calc(100vh - 10rem);
+  background-color: #856262;
+}
+
+.search-area {
+  display: flex;
+  padding: 10rem;
+  align-content: center;
   justify-content: center;
 }
+
+.search-field,
+.search-btn {
+  border: 1px solid #dedede;
+  font-size: 1.4rem;
+  padding: 0.8rem 1.4rem;
+  margin: 0;
+  outline: none;
+}
+
+.search-field {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+.search-btn {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.search-field {
+  width: 30rem;
+  border-right: none;
+  border-color: #2e191e;
+}
+
+.search-btn {
+  cursor: pointer;
+  background-color: #2e191e;
+  border-color: #2e191e;
+  color: #f3f3f3;
+
+  &:hover {
+    color: #ccc;
+  }
+}
+
+/*
+  width: 30rem;
+  height: 4rem;
+  font-size: 1.6rem;
+  padding: 1rem 2rem;
+  border: none;
+}
+
+.search-btn {
+  height: 4rem;
+  width: 4rem;
+  border: none;
+}
+
+*/
