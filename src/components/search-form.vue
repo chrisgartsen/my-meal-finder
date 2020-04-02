@@ -6,7 +6,7 @@
         class="search-field"
         name="search"
         id="search-field"
-        placeholder="Search on keyword e.g Beef"
+        placeholder="Search on keyword e.g Beef or Pasta"
         v-model="searchText"
       />
       <button class="search-btn" type="submit">
