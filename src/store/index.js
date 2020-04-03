@@ -7,10 +7,14 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    searchString: '',
     meals: [],
     meal: null
   },
   getters: {
+    searchString(state) {
+      return state.searchString
+    },
     meals(state) {
       return state.meals
     },
@@ -19,6 +23,9 @@ export default new Vuex.Store({
     }    
   },
   mutations: {
+    setSearchString(state, searchString) {
+      state.searchString = searchString
+    },
     setMeals(state, meals) {
       state.meals = meals
     },
@@ -29,6 +36,7 @@ export default new Vuex.Store({
   actions: {
     async search({commit}, searchString) {
       try {
+        commit('setSearchString', searchString)
         const result = await Axios.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchString}`)
         commit('setMeals', result.data.meals)
       } catch (error) {
