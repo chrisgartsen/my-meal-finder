@@ -5,7 +5,7 @@
         <h1>Recipe Finder</h1>
       </div>
       <div class="nav-right">
-        <router-link to="/home">Home</router-link>
+        <router-link to="/">Home</router-link>
         <router-link to="/about">About</router-link>
       </div>
     </div>

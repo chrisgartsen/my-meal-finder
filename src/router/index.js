@@ -4,6 +4,9 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  { path: '/', component: () => import('@/views/meals-index.vue') },
+  { path: '/details/:idMeal', component: () => import('@/views/meal-detail.vue'), props: true}
+
 ]
 
 const router = new VueRouter({
