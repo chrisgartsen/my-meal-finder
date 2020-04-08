@@ -25,7 +25,6 @@ export default {
   },
   methods: {
     showDetail(idMeal) {
-      console.log("Show Detail for", idMeal)
       this.$router.push({ path: `/details/${idMeal}` })
     }
   }

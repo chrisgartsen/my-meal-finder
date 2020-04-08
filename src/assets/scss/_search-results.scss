@@ -12,6 +12,10 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   gap: 3rem;
+
+  img {
+    width: 100%;
+  }
 }
 
 .result-container {

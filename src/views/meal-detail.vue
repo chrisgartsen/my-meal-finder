@@ -1,20 +1,26 @@
 <template>
-  <div>
-    <router-link to="/">Back</router-link>
-    <div v-if="meal">
-      <h2>{{ meal.strMeal }}</h2>
-      <div class="tags">
-        {{ meal.strTags }}
-      </div>
-      <img :src="meal.strMealThumb" />
+  <main class="main detail-main">
+
+    <nav class="detail-nav">
+      <router-link to="/" class="">&larr; Back to search results</router-link>
+    </nav>
+
+    <div v-if="meal" class="meal-details">
+      <h2 class="meal-header">{{ meal.name }}</h2>
+      <img :src="meal.thumb" class="meal-image"/>
       
-      <h3>Ingredients</h3>
-
-      <h3>Instructions</h3>
-      <p> {{ meal.strInstructions }} </p>
+      <div class="meal-ingredients">
+        <h3>Ingredients</h3>
+        <ul>
+          <li v-for="ingredient in meal.ingredients" :key="ingredient.name">{{ ingredient.name }} - {{ ingredient.measure }}</li>
+        </ul>
+      </div>
+      <div class="meal-instructions">
+        <h3>Instructions</h3>
+        <p> {{ meal.instructions }} </p>        
+      </div>  
     </div>
-
-  </div>  
+  </main>  
 </template>
 
 <script>
@@ -32,7 +38,6 @@ export default {
   },
   created() {
     this.$store.dispatch('clearMeal')
-    console.log('Loading data for', this.idMeal)
     this.$store.dispatch('fetchMeal', this.idMeal)
   }
 }
