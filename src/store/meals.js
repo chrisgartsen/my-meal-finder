@@ -69,6 +69,14 @@ export default {
       } catch(error) {
         console.log(error)
       }
+    },
+    async fetchMealsForCategory( { commit }, categoryName) {
+      try {
+        const result = await Axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${categoryName}`)
+        commit('setMeals', result.data.meals)
+      } catch(error) {
+        console.log(error)
+      }
     }
   }
 
