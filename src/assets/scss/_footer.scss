@@ -1,5 +1,5 @@
 footer {
-  color: white;
+  color: $light-gray-1;
   background-color: $primary-color;
   height: 10rem;
   display: flex;
@@ -7,8 +7,4 @@ footer {
   align-items: center;
   justify-content: center;
   font-size: 1.4rem;
-  h3{ 
-    font-size: 1.8rem;
-    margin-right: 1rem;
-  }
 }

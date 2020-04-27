@@ -1,6 +1,6 @@
 <template>
   <footer> 
-    <h3>My Meal Finder</h3> 
+    <h3 class="header-3">My Meal Finder</h3> 
     <p>©2020 - this website is still under development.</p>
   </footer>  
 </template>

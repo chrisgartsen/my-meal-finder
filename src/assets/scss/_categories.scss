@@ -1,0 +1,27 @@
+#category-list {
+  color: $light-gray-1;
+
+  .header-2 {
+    margin-bottom: 3rem;
+  }
+
+  .container {
+    padding: 5rem 0;
+    max-width: 100rem;
+    color: white;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 3rem;
+  
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.category {
+  img {
+    width: 100px;
+  }
+}

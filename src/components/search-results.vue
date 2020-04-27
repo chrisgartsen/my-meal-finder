@@ -3,7 +3,9 @@
   <p class="search-string">Results for:  {{ searchString }}</p>
   <div class="search-results">
     <div class="meal" v-for="meal in meals" :key="meal.idMeal" @click="showDetail(meal.idMeal)">
-      <h3>{{ meal.strMeal }}</h3>
+      <div class="meal-title">
+        <h3>{{ meal.strMeal }}</h3>
+      </div>
       <img :src="meal.strMealThumb" />
     </div>
   </div>

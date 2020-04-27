@@ -17,5 +17,8 @@ export default {
     navbar,
     pageFooter
   },
+  created() {
+    this.$store.dispatch('fetchCategories')
+  }
 }
 </script>

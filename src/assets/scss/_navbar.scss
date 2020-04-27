@@ -1,6 +1,7 @@
 .nav {
   display: block;
   background-color: $primary-color;
+  color: $light-gray-1;
 
   .container {
     min-width: 30rem;
@@ -34,12 +35,6 @@
       border-bottom: 2px $light-gray-1 solid;
     }
   }
-}
-
-h1 {
-  color: #f3f3f3;
-  font-size: 3rem;
-  text-transform: uppercase;
 }
 
 .nav-left {
